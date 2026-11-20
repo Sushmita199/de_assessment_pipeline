@@ -167,32 +167,4 @@ WARNING purchase_order_sample.txt: SKU 71293252 EXT_COST_MISMATCH - printed EXT 
 - **In production:** land the raw files in cloud storage and run this as a scheduled
   Databricks or Airflow job, loading into a Delta or SQL Server table with `MERGE`
   on (po_number, sku).
-
-## AI usage
-
-I used **Claude Code** (Anthropic's CLI assistant, inside VS Code). No `CLAUDE.md`
-or other instruction file was used. I directed it through the chat:
-
-1. First I asked it to read the brief and the sample files and to **only explain
-   what to do, without writing code**. It gave me a staged plan, and I reviewed the
-   files and the edge cases myself.
-2. Then I asked it to build the project. I told it to **keep my folder structure**
-   (`input/ output/ src/ sql/ logs/`) and to **not over-engineer: keep the code basic
-   so I can explain it in the interview.**
-3. I checked the results by running the pipeline, reading the generated Excel and
-   the database, and running the tests.
-4. I asked it to remove all code comments. The explanations of the design live in
-   this README instead.
-
-### One thing the AI got wrong
-
-- **Over-engineered first draft.** It started by writing a dataclass models file, and
-  it planned a generic "number candidate" resolver and code that would read table
-  columns dynamically from the header line. That was far more than this task needs,
-  and hard to explain in a walkthrough. I stopped it and told it to keep things basic.
-  It deleted the dataclass file, and the final code uses plain dicts, one regex per
-  layout, and a single explicit rule for the `55,440` cost.
-- **Wrong column count in its plan.** Its written plan said each sample-1 item line
-  ends with "9 numeric fields". It actually has **8** (retail, cost, ext cost, ctns,
-  cspk, ext qty, cube, kg). A parser built on that would have mis-assigned every
-  number. The final regex uses 8.
+l regex uses 8.
