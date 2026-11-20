@@ -1,0 +1,28 @@
+2026-11-20 15:15:40,910 INFO    Run started: 2 file(s) to process
+2026-11-20 15:15:40,910 INFO    ---- purchase_order_sample.txt ----
+2026-11-20 15:15:40,928 INFO    purchase_order_sample.txt: layout=table, PO#=TX9K2QP, line items=12
+2026-11-20 15:15:40,929 WARNING purchase_order_sample.txt: SKU 71097218 MISSING_UPC - no UPC found for this SKU -> row kept, UPC left blank - never invent a UPC
+2026-11-20 15:15:40,929 WARNING purchase_order_sample.txt: SKU 71293252 EXT_COST_MISMATCH - printed EXT COST 4146.08 vs computed 4046.08 -> printed value kept in 'EXT Cost', computed value in 'Total Cost'
+2026-11-20 15:15:40,929 WARNING purchase_order_sample.txt: SKU 71293276 COST_REPAIRED - cost printed as '55,440', read as 55.44 -> best guess, accepted because cost x qty matches printed EXT COST
+2026-11-20 15:15:40,993 INFO    purchase_order_sample.txt: wrote output\purchase_order_sample_output.xlsx
+2026-11-20 15:15:41,249 INFO    purchase_order_sample.txt: loaded into SQLite {'rows_in_file': 12, 'inserted': 12, 'updated': 0, 'table_rows_total': 12}
+2026-11-20 15:15:41,249 INFO    ---- purchase_order_sample_2.txt ----
+2026-11-20 15:15:41,257 INFO    purchase_order_sample_2.txt: layout=labeled, PO#=PL7M3RK, line items=6
+2026-11-20 15:15:41,306 INFO    purchase_order_sample_2.txt: wrote output\purchase_order_sample_2_output.xlsx
+2026-11-20 15:15:41,386 INFO    purchase_order_sample_2.txt: loaded into SQLite {'rows_in_file': 6, 'inserted': 6, 'updated': 0, 'table_rows_total': 18}
+2026-11-20 15:15:41,387 INFO    ==== RUN SUMMARY: status=WARNING | files=2 | failed=0 | rows processed=18 | rows flagged=3 | parse problems=0 ====
+2026-11-20 15:15:41,387 INFO    Log file: logs\pipeline_20261120_151540.log
+2026-11-20 15:15:42,282 INFO    Run started: 2 file(s) to process
+2026-11-20 15:15:42,282 INFO    ---- purchase_order_sample.txt ----
+2026-11-20 15:15:42,299 INFO    purchase_order_sample.txt: layout=table, PO#=TX9K2QP, line items=12
+2026-11-20 15:15:42,299 WARNING purchase_order_sample.txt: SKU 71097218 MISSING_UPC - no UPC found for this SKU -> row kept, UPC left blank - never invent a UPC
+2026-11-20 15:15:42,299 WARNING purchase_order_sample.txt: SKU 71293252 EXT_COST_MISMATCH - printed EXT COST 4146.08 vs computed 4046.08 -> printed value kept in 'EXT Cost', computed value in 'Total Cost'
+2026-11-20 15:15:42,299 WARNING purchase_order_sample.txt: SKU 71293276 COST_REPAIRED - cost printed as '55,440', read as 55.44 -> best guess, accepted because cost x qty matches printed EXT COST
+2026-11-20 15:15:42,359 INFO    purchase_order_sample.txt: wrote output\purchase_order_sample_output.xlsx
+2026-11-20 15:15:42,431 INFO    purchase_order_sample.txt: loaded into SQLite {'rows_in_file': 12, 'inserted': 0, 'updated': 12, 'table_rows_total': 18}
+2026-11-20 15:15:42,431 INFO    ---- purchase_order_sample_2.txt ----
+2026-11-20 15:15:42,432 INFO    purchase_order_sample_2.txt: layout=labeled, PO#=PL7M3RK, line items=6
+2026-11-20 15:15:42,466 INFO    purchase_order_sample_2.txt: wrote output\purchase_order_sample_2_output.xlsx
+2026-11-20 15:15:42,547 INFO    purchase_order_sample_2.txt: loaded into SQLite {'rows_in_file': 6, 'inserted': 0, 'updated': 6, 'table_rows_total': 18}
+2026-11-20 15:15:42,547 INFO    ==== RUN SUMMARY: status=WARNING | files=2 | failed=0 | rows processed=18 | rows flagged=3 | parse problems=0 ====
+2026-11-20 15:15:42,548 INFO    Log file: logs\pipeline_20261120_151542.log

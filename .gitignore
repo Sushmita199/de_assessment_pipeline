@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+# Generated on every run - can be rebuilt with: python src/run_pipeline.py
+output/*.db
+logs/*.log
+!logs/example_run.log
+
+# Assignment brief from BHF - not ours to publish
+DE_TakeHome_Assignment.pdf
